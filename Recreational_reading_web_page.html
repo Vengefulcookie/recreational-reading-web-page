@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recreational Reading📖 - My hobby</title>
+    <style>
+      body {
+        background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      p {
+        line-height: 1.2;
+        font-size: 16px;
+        margin: 25px auto;
+      }
+      .join {
+        display: block;
+        margin: 18px auto;
+        border: 1px solid rgb(150, 196, 249);
+        background: #ffffff;
+        font-size: 15px;
+        border-radius: 5px;
+        padding: 5px;
+        transition: all 200ms ease-in-out;
+      }
+      .join:hover {
+        background: rgb(150, 196, 249);
+        cursor: pointer;
+      }
+      .wrapping {
+        max-width: 660px;
+        background: rgb(227, 179, 251);
+        margin: 10px auto;
+        padding: 15px;
+        border-radius: 10px;
+      }
+      footer {
+        text-align: center;
+        margin: 10px;
+        font-size: 18px;
+      }
+      .theme {
+        display: block;
+        text-align: center;
+        font-size: 13px;
+        background: #000000;
+        color: #ffffff;
+        margin: 18px auto;
+        border-radius: 5px;
+        padding: 5px;
+      }
+      .theme:hover {
+        font-size: 13px;
+        background: #ffffff;
+        color: #000000;
+      }
+      .cool_book_shape {
+        transition: all 2000ms ease-in-out;
+      }
+      .cool_book_shape:hover {
+        transform: scale(1.1) rotate(360deg);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+        margin: 30px auto;
+        transition: all 2000ms ease-in-out;
+      }
+      .grid img {
+        width: 100%;
+      }
+      .grid img:hover {
+        transform: scale(1.3);
+      }
+      .dark_theme {
+        background: linear-gradient(
+          109.6deg,
+          rgb(6, 2, 2) 32.4%,
+          rgb(137, 30, 47) 98.8%
+        );
+        color: #ffffff;
+      }
+      .dark_theme .wrapping {
+        background: #2e2e2ee2;
+      }
+      .dark_theme a {
+        color: rgb(0, 255, 247);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme">Switch theme</button>
+    <div class="wrapping">
+      <h1>📚Recreational Reading📚</h1>
+      <h2>The one hobby I can't get enough of</h2>
+      <br />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/140/718/original/jaredd-craig-HH4WBGNyltc-unsplash4.jpg?1724448471"
+        alt="books"
+        class="cool_book_shape"
+      />
+      <p>
+        Reading for pleasure engages the imagination and it is an effective way
+        to manage stress (until the characters are the ones stressing you out)
+        by increasing enjoyment and relaxation.
+        <a
+          href="https://nerdybookgirl.com/best-books-to-start-reading-habit/"
+          target="_blank"
+          >Recreational reading</a
+        >
+        also can have benefits for your concentration, vocabulary, reading and
+        writing skills, and improving working memory. Leisure reading has been
+        shown to increase an individual's communication skills, understanding of
+        themselves and others who are different from them, and develop overall
+        empathy skills. Overall it is just fun diving into different world's.
+        Readers select from a wide range of extended texts, including but not
+        exclusive to narrative fiction, nonfiction, picture books, e-books,
+        comic books, and graphic novels.
+      </p>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/140/601/original/665e52078f489.image.jpg?1724365079"
+          alt="comic books"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/140/720/original/81969417_109274410602857_2111226212692000768_n2.jpg?1724450886"
+          alt="online book"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/140/602/original/preloved_fiction_novels__indiv_1589809388_71c2d69f_progressive.jpg?1724365101"
+          alt="novels"
+        />
+      </div>
+      <button class="join">Join the bookclub</button>
+    </div>
+    <footer>Coded by Snethemba Shangase🖤</footer>
+    <script>
+      function switchTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark_theme");
+      }
+      let theme = document.querySelector(".theme");
+      theme.addEventListener("click", switchTheme);
+
+      function bookClub() {
+        let join = prompt("Do you enjoy reading?");
+        join = join.toLowerCase().trim();
+        if (join === "yes") {
+          alert("That's great!😁 Send me your email to join my bookclub🤓");
+        } else {
+          alert(
+            "That's okay😊, it is never too late to start. Send me your email to join my bookclub🤓"
+          );
+        }
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        alert("Thank you " + name + ". I'll be in touch soon📖");
+      }
+
+      let joinButton = document.querySelector(".join");
+      joinButton.addEventListener("click", bookClub);
+    </script>
+  </body>
+</html>
